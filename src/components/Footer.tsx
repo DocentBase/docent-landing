@@ -14,9 +14,9 @@ export function Footer() {
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2.5">
               <img
-                src="/final_logo.jpg"
+                src="/logo.png"
                 alt="Docent Logo"
-                className="w-7 h-7 rounded-md object-contain border border-zinc-200/80"
+                className="w-7 h-7 rounded-md object-contain"
               />
               <span className="font-semibold text-sm tracking-tight text-zinc-950">DOCENT</span>
               <span className="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-zinc-100 text-zinc-700 border border-zinc-200/80">

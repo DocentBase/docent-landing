@@ -39,9 +39,9 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a href="#" className="flex items-center gap-2.5 group">
             <img
-              src="/final_logo.jpg"
+              src="/logo.png"
               alt="Docent Logo"
-              className="w-8 h-8 rounded-md object-contain border border-zinc-200/80 group-hover:border-zinc-300 transition-colors"
+              className="w-8 h-8 rounded-md object-contain group-hover:scale-105 transition-transform"
             />
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
