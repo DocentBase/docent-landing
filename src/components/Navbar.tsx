@@ -76,6 +76,9 @@ export function Navbar() {
           <a href="#pricing" className="hover:text-zinc-950 transition-colors">
             Pricing
           </a>
+          <a href="/help" className="hover:text-[#1d4ed8] text-[#1d4ed8] font-semibold transition-colors flex items-center gap-1">
+            <span>Help &amp; Docs</span>
+          </a>
         </nav>
 
         {/* Action Buttons & Portal Direct Links */}
@@ -172,6 +175,14 @@ export function Navbar() {
               className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
             >
               Pricing Plans
+            </a>
+            <a 
+              href="/help" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-md text-xs font-semibold text-[#1d4ed8] bg-blue-50/50 hover:bg-blue-50 flex items-center justify-between"
+            >
+              <span>Help Center &amp; Documentation</span>
+              <BookOpen className="w-4 h-4 text-[#1d4ed8]" />
             </a>
           </div>
 

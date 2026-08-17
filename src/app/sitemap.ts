@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
+import { HELP_ARTICLES } from "@/data/help-articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://docentbase.com";
   const currentDate = new Date().toISOString();
 
-  return [
+  const landingPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}`,
       lastModified: currentDate,
@@ -48,4 +49,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
   ];
+
+  const helpStaticPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/help`,
+      lastModified: currentDate,
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/help/troubleshoot`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+  ];
+
+  const helpArticlePages: MetadataRoute.Sitemap = HELP_ARTICLES.map((article) => ({
+    url: `${baseUrl}/help/articles/${article.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  return [...landingPages, ...helpStaticPages, ...helpArticlePages];
 }

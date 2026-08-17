@@ -74,6 +74,22 @@ export function Footer() {
               </li>
               <li>
                 <a 
+                  href="/help" 
+                  className="hover:text-[#1d4ed8] text-[#1d4ed8] font-medium transition"
+                >
+                  Help Center &amp; Docs (/help)
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/help/troubleshoot" 
+                  className="hover:text-zinc-900 transition"
+                >
+                  Diagnostic Problem Solver
+                </a>
+              </li>
+              <li>
+                <a 
                   href="https://docentbase.com" 
                   className="hover:text-zinc-900 transition"
                 >
