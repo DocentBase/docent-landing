@@ -41,9 +41,11 @@ export function Navbar() {
         {/* Brand Logo & Tag */}
         <div className="flex items-center gap-3">
           <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-[1.02] transition-transform">
-              <GraduationCap className="w-5 h-5" />
-            </div>
+            <img
+              src="/final_logo.jpg"
+              alt="Docent Logo"
+              className="w-9 h-9 rounded-lg object-contain shadow-2xs group-hover:scale-105 transition-transform"
+            />
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 <span className="font-bold text-lg tracking-tight text-zinc-950">DOCENT</span>

@@ -13,9 +13,11 @@ export function Footer() {
           {/* Col 1: Brand & Tagline (2 cols) */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold shadow-xs">
-                <GraduationCap className="w-4 h-4" />
-              </div>
+              <img
+                src="/final_logo.jpg"
+                alt="Docent Logo"
+                className="w-8 h-8 rounded-lg object-contain shadow-xs"
+              />
               <span className="font-bold text-base tracking-tight text-zinc-950">DOCENT</span>
               <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
                 OS 2.4
