@@ -27,6 +27,17 @@ export const metadata: Metadata = {
     title: "Docent — Frictionless Operating System for Educators",
     description: "Stop wasting hours on bookkeeping, fee chasing, and manual roll-calls. Let Docent handle the friction while you focus purely on teaching.",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -37,7 +48,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content="#2563eb" />
       </head>
       <body className="min-h-screen bg-[#F8FAFC] text-[#18181B] antialiased selection:bg-blue-600 selection:text-white">
