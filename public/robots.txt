@@ -1,4 +1,52 @@
+# ==============================================================================
+# DOCENT (docentbase.com) - Official Robots Exclusion & AI Discovery Protocol
+# All legitimate search engines, AI models, crawlers & indexers are welcome.
+# ==============================================================================
+
+# Content Signals for Generative AI & Semantic Discovery
+# Explicitly authorizes AI search summarization, indexing & discovery
+Content-Signal: search=yes,ai-input=yes,ai-train=yes,use=full
+
+# Global Wildcard - Unrestricted Access to All Public Assets
 User-agent: *
 Allow: /
 
+# Major Web Search Engines
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-News
+User-agent: Googlebot-Video
+User-agent: Google-InspectionTool
+User-agent: Bingbot
+User-agent: msnbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: Baiduspider
+User-agent: YandexBot
+User-agent: Slurp
+User-agent: Qwantify
+Allow: /
+
+# Generative AI, LLM Crawlers & Search Summarizers
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: cohere-ai
+User-agent: Amazonbot
+User-agent: meta-externalagent
+User-agent: FacebookBot
+User-agent: Twitterbot
+User-agent: LinkedInBot
+User-agent: YouBot
+User-agent: Diffbot
+Allow: /
+
+# Host & Master Sitemap Directives
+Host: https://docentbase.com
 Sitemap: https://docentbase.com/sitemap.xml
