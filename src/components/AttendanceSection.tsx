@@ -10,9 +10,7 @@ import {
   CheckCircle2, 
   XCircle, 
   Clock, 
-  UserCheck, 
-  ArrowRight,
-  ShieldAlert
+  ArrowRight
 } from "lucide-react";
 
 export function AttendanceSection() {
@@ -20,129 +18,123 @@ export function AttendanceSection() {
   const [usiSimulationActive, setUsiSimulationActive] = useState(false);
 
   return (
-    <section id="attendance" className="py-20 bg-white border-b border-zinc-200">
+    <section id="attendance" className="py-20 bg-white border-t border-zinc-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3">
-          <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-blue-600">
-            HIGH-THROUGHPUT ATTENDANCE COCKPIT
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950">
-            Log 1,000+ Students Daily with Zero Friction
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded border border-zinc-200 bg-[#fafaf9] text-zinc-700 shadow-stitch">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#1d4ed8]">
+              Multi-Modal Hardware &amp; App Architecture
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-zinc-950">
+            Multi-Modal High-Speed Attendance
           </h2>
-          <p className="text-zinc-600 text-sm sm:text-base">
-            Whether you want a rapid tap on your smartphone, a biometric fingerprint scanner at your center gate, a QR check-in, or traditional paper logs — Docent seamlessly handles it all.
+          <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
+            Capture attendance in seconds across hundreds of students. Support for phone tap, optical fingerprint hardware, dynamic QR cards, and automated parent absentee alerts.
           </p>
         </div>
 
         {/* 4 Attendance Pillars Grid */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
           
           <div 
             onClick={() => setActiveTab("phone")}
-            className={`p-5 rounded-2xl border transition-all cursor-pointer ${
+            className={`p-4.5 rounded-lg border transition-all cursor-pointer ${
               activeTab === "phone" 
-                ? "bg-blue-50/50 border-blue-600 shadow-xs" 
-                : "bg-[#F8FAFC] border-zinc-200 hover:border-zinc-300"
+                ? "bg-[#fafaf9] border-[#1d4ed8] shadow-stitch" 
+                : "bg-white border-zinc-200/90 hover:border-zinc-300"
             }`}
           >
-            <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-3">
-              <Smartphone className="w-5 h-5" />
-            </div>
-            <h3 className="font-bold text-sm text-zinc-900">A. Mobile Green/Red Tap</h3>
-            <p className="text-xs text-zinc-500 mt-1">
-              Teacher's phone shows student photo, roll, name. Tap big Green (Present) or Red (Absent) in seconds.
+            <div className="text-xs font-semibold text-[#1d4ed8] font-mono mb-2">MODE A</div>
+            <h3 className="font-semibold text-sm text-zinc-900">Mobile Tap Cockpit</h3>
+            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">
+              Teacher phone displays student roll, photo, and name. Tap Present or Absent in under a second.
             </p>
           </div>
 
           <div 
             onClick={() => setActiveTab("fingerprint")}
-            className={`p-5 rounded-2xl border transition-all cursor-pointer ${
+            className={`p-4.5 rounded-lg border transition-all cursor-pointer ${
               activeTab === "fingerprint" 
-                ? "bg-blue-50/50 border-blue-600 shadow-xs" 
-                : "bg-[#F8FAFC] border-zinc-200 hover:border-zinc-300"
+                ? "bg-[#fafaf9] border-[#1d4ed8] shadow-stitch" 
+                : "bg-white border-zinc-200/90 hover:border-zinc-300"
             }`}
           >
-            <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-3">
-              <Fingerprint className="w-5 h-5" />
-            </div>
-            <h3 className="font-bold text-sm text-zinc-900">B. Biometric Fingerprint</h3>
-            <p className="text-xs text-zinc-500 mt-1">
-              High-volume optical sensors installed at your coaching entrance. Automated hands-free logging.
+            <div className="text-xs font-semibold text-[#1d4ed8] font-mono mb-2">MODE B</div>
+            <h3 className="font-semibold text-sm text-zinc-900">Biometric Sensor</h3>
+            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">
+              Plug-and-play optical USB sensors at center gate. Students scan finger for automated verification.
             </p>
           </div>
 
           <div 
             onClick={() => setActiveTab("qr")}
-            className={`p-5 rounded-2xl border transition-all cursor-pointer ${
+            className={`p-4.5 rounded-lg border transition-all cursor-pointer ${
               activeTab === "qr" 
-                ? "bg-blue-50/50 border-blue-600 shadow-xs" 
-                : "bg-[#F8FAFC] border-zinc-200 hover:border-zinc-300"
+                ? "bg-[#fafaf9] border-[#1d4ed8] shadow-stitch" 
+                : "bg-white border-zinc-200/90 hover:border-zinc-300"
             }`}
           >
-            <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-3">
-              <QrCode className="w-5 h-5" />
-            </div>
-            <h3 className="font-bold text-sm text-zinc-900">C. Dynamic QR Check-in</h3>
-            <p className="text-xs text-zinc-500 mt-1">
-              Students scan a rotating QR code or their personal student ID card on arrival.
+            <div className="text-xs font-semibold text-[#1d4ed8] font-mono mb-2">MODE C</div>
+            <h3 className="font-semibold text-sm text-zinc-900">Dynamic QR Cards</h3>
+            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">
+              Students tap physical ID barcode/QR cards or scan rotating screen QR at center reception.
             </p>
           </div>
 
           <div 
             onClick={() => setActiveTab("paper")}
-            className={`p-5 rounded-2xl border transition-all cursor-pointer ${
+            className={`p-4.5 rounded-lg border transition-all cursor-pointer ${
               activeTab === "paper" 
-                ? "bg-blue-50/50 border-blue-600 shadow-xs" 
-                : "bg-[#F8FAFC] border-zinc-200 hover:border-zinc-300"
+                ? "bg-[#fafaf9] border-[#1d4ed8] shadow-stitch" 
+                : "bg-white border-zinc-200/90 hover:border-zinc-300"
             }`}
           >
-            <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center mb-3">
-              <FileSpreadsheet className="w-5 h-5" />
-            </div>
-            <h3 className="font-bold text-sm text-zinc-900">D. Paper Ledger Backup</h3>
-            <p className="text-xs text-zinc-500 mt-1">
-              Full printable attendance sheets with barcode strips for traditional institutions.
+            <div className="text-xs font-semibold text-[#1d4ed8] font-mono mb-2">MODE D</div>
+            <h3 className="font-semibold text-sm text-zinc-900">Printable Ledger</h3>
+            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">
+              One-click PDF printable roll sheets with barcode strips for paper-first coaching institutes.
             </p>
           </div>
 
         </div>
 
-        {/* The Universal Student Identifier (USI) Breakthrough Callout */}
-        <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50/40 p-6 sm:p-7 shadow-xs">
+        {/* The Universal Student Identifier (USI) Breakdown */}
+        <div className="mt-8 rounded-xl border border-zinc-200/90 bg-[#fafaf9] p-5 sm:p-6 shadow-stitch">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             
             <div className="space-y-2 max-w-2xl">
               <div className="flex items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-200 text-amber-900">
-                  PATENTED ARCHITECTURE
+                <span className="text-[10px] font-semibold uppercase tracking-wider bg-zinc-200 text-zinc-800 px-2 py-0.5 rounded">
+                  Core Innovation
                 </span>
-                <span className="text-xs font-bold text-amber-900">Universal Student Identifier (USI)</span>
+                <span className="text-xs font-semibold text-zinc-900">Universal Student Identifier (USI)</span>
               </div>
-              <h3 className="text-lg font-bold text-zinc-900">
-                Solving the Classic Cross-Batch & Late Arrival Dilemma
+              <h3 className="text-base sm:text-lg font-semibold text-zinc-950">
+                Solving the Cross-Batch &amp; Rescheduled Session Dilemma
               </h3>
               <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-                What happens when a student enrolled in the <strong className="text-zinc-900">Morning 8:00 AM Batch</strong> comes to the <strong className="text-zinc-900">Afternoon 4:30 PM Batch</strong> instead? In other apps, teachers waste 10 minutes searching other batch rosters. With Docent USI, a single fingerprint or QR scan immediately links to their master profile, credits attendance, and tags them as a Cross-Batch Guest.
+                When a student enrolled in the <strong className="text-zinc-900 font-medium">Morning 8:00 AM session</strong> attends the <strong className="text-zinc-900 font-medium">Evening 4:30 PM session</strong>, traditional software requires teachers to manually search across different rosters. With Docent USI, a single fingerprint or QR scan automatically links to their master profile, credits attendance, and notifies parents.
               </p>
             </div>
 
-            <div className="bg-white p-4 rounded-xl border border-amber-200 shadow-2xs space-y-3 min-w-[280px]">
-              <div className="text-xs font-bold text-zinc-900">Live USI Simulator</div>
-              <div className="p-2.5 rounded-lg bg-zinc-50 border border-zinc-200 text-[11px] font-mono space-y-1">
-                <div>Scan: <span className="font-bold text-blue-600">USI-9941 (Afridi Islam)</span></div>
-                <div>Primary: <span className="text-zinc-600">Batch-A Morning</span></div>
-                <div className="text-amber-700 font-semibold">Active Session: Batch-B Evening</div>
+            <div className="bg-white p-4 rounded-lg border border-zinc-200 shadow-stitch space-y-2.5 min-w-[280px]">
+              <div className="text-xs font-semibold text-zinc-900">Live USI Resolver Simulator</div>
+              <div className="p-2.5 rounded bg-zinc-50 border border-zinc-200 text-[11px] font-mono space-y-1 text-zinc-700">
+                <div>Scan: <span className="font-medium text-[#1d4ed8]">USI-9941 (Afridi Islam)</span></div>
+                <div>Primary: <span className="text-zinc-500">Batch-A Morning</span></div>
+                <div className="text-zinc-900 font-medium">Detected: Batch-B Evening</div>
               </div>
               <button
                 onClick={() => {
                   setUsiSimulationActive(true);
-                  setTimeout(() => setUsiSimulationActive(false), 5000);
+                  setTimeout(() => setUsiSimulationActive(false), 4500);
                 }}
-                className="w-full h-8 rounded-lg bg-amber-600 text-white text-xs font-semibold hover:bg-amber-700 transition"
+                className="w-full h-8 rounded bg-zinc-900 text-white text-xs font-medium hover:bg-zinc-800 transition"
               >
-                {usiSimulationActive ? "✓ Attendance Auto-Logged Across Batches!" : "Test Universal Cross-Batch Scan"}
+                {usiSimulationActive ? "✓ Attendance Resolved Seamlessly!" : "Test Cross-Batch Resolver"}
               </button>
             </div>
 

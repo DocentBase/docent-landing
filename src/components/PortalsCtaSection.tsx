@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Users, ShieldCheck, Sparkles, Smartphone, CheckCircle, ExternalLink } from "lucide-react";
+import { ArrowRight, Users, CheckCircle2, ExternalLink } from "lucide-react";
 
 export function PortalsCtaSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,65 +15,64 @@ export function PortalsCtaSection() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white border-t border-zinc-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main CTA Card with Split View */}
-        <div className="rounded-3xl border border-zinc-200 bg-gradient-to-b from-[#F8FAFC] to-white p-8 sm:p-12 shadow-sm">
+        <div className="rounded-xl border border-zinc-200/90 bg-[#fafaf9] p-6 sm:p-10 shadow-stitch">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left: Direct Access to Both Portals (7 cols) */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-5">
               
-              <div className="space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>INSTANT ACCESS WORKSPACES</span>
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-white border border-zinc-200 text-zinc-700 text-[11px] font-semibold uppercase tracking-wider">
+                  <span>Direct Workspace Access</span>
                 </div>
                 
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950">
-                  Ready to Experience Zero Friction in Your Teaching?
+                <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-zinc-950">
+                  Ready to Experience Calm in Your Teaching?
                 </h2>
                 
-                <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-                  Join hundreds of forward-thinking educators, academies, and coaching centers operating on the Docent ecosystem.
+                <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed">
+                  Join hundreds of educators, academies, and private coaching centers operating effortlessly on Docent.
                 </p>
               </div>
 
               {/* Two Direct Portal Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                 
                 {/* Admin Portal Card */}
-                <div className="rounded-2xl border-2 border-blue-600/30 bg-blue-50/40 p-5 space-y-3 flex flex-col justify-between hover:border-blue-600 transition">
-                  <div className="space-y-1.5">
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-600 text-white uppercase tracking-wider">
-                      TEACHER & ADMIN COCKPIT
+                <div className="rounded-lg border border-zinc-200/90 bg-white p-4.5 space-y-3 flex flex-col justify-between shadow-stitch">
+                  <div className="space-y-1">
+                    <span className="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-zinc-100 text-zinc-800 uppercase tracking-wider">
+                      Teacher &amp; Admin Cockpit
                     </span>
-                    <h3 className="font-bold text-base text-zinc-900">admin.docentbase.com</h3>
-                    <p className="text-xs text-zinc-600">
-                      Attendance logger, monthly grace-period fee manager, 10-point daily homework grader, and SMS engine.
+                    <h3 className="font-semibold text-sm text-zinc-900">admin.docentbase.com</h3>
+                    <p className="text-xs text-zinc-500 leading-relaxed">
+                      Attendance logger, monthly grace-period fee ledger, 10-point daily homework, and SMS engine.
                     </p>
                   </div>
                   <a
                     href="https://admin.docentbase.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-9 items-center justify-center gap-1.5 rounded-lg bg-blue-600 text-xs font-bold text-white shadow-2xs hover:bg-blue-700 transition"
+                    className="inline-flex h-8.5 items-center justify-center gap-1.5 rounded bg-[#1d4ed8] hover:bg-[#1e40af] text-xs font-semibold text-white shadow-stitch transition"
                   >
-                    <span>Open Teacher Dashboard</span>
+                    <span>Launch Teacher Cockpit</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
 
                 {/* Student Portal Card */}
-                <div className="rounded-2xl border border-zinc-200 bg-white p-5 space-y-3 flex flex-col justify-between hover:border-zinc-300 transition">
-                  <div className="space-y-1.5">
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-zinc-100 text-zinc-700 uppercase tracking-wider">
-                      STUDENT & PARENT HUB
+                <div className="rounded-lg border border-zinc-200/90 bg-white p-4.5 space-y-3 flex flex-col justify-between shadow-stitch">
+                  <div className="space-y-1">
+                    <span className="px-1.5 py-0.2 rounded text-[10px] font-semibold bg-zinc-100 text-zinc-800 uppercase tracking-wider">
+                      Student &amp; Parent Hub
                     </span>
-                    <h3 className="font-bold text-base text-zinc-900">student.docentbase.com</h3>
-                    <p className="text-xs text-zinc-600">
+                    <h3 className="font-semibold text-sm text-zinc-900">student.docentbase.com</h3>
+                    <p className="text-xs text-zinc-500 leading-relaxed">
                       Monthly attendance stats, test scores, lecture notes download, topic syllabus, and fee receipts.
                     </p>
                   </div>
@@ -81,7 +80,7 @@ export function PortalsCtaSection() {
                     href="https://student.docentbase.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-9 items-center justify-center gap-1.5 rounded-lg border border-zinc-200 bg-zinc-50 text-xs font-semibold text-zinc-800 hover:bg-zinc-100 transition"
+                    className="inline-flex h-8.5 items-center justify-center gap-1.5 rounded border border-zinc-300 bg-white text-xs font-semibold text-zinc-800 hover:bg-zinc-50 shadow-stitch transition"
                   >
                     <Users className="w-3.5 h-3.5 text-zinc-500" />
                     <span>Open Student Portal</span>
@@ -94,60 +93,60 @@ export function PortalsCtaSection() {
             </div>
 
             {/* Right: Request Free On-Site Onboarding Form (5 cols) */}
-            <div className="lg:col-span-5 rounded-2xl border border-zinc-200 bg-white p-6 shadow-md shadow-zinc-200/50 space-y-4">
+            <div className="lg:col-span-5 rounded-lg border border-zinc-200/90 bg-white p-5 sm:p-6 shadow-stitch space-y-3.5">
               
-              <div className="space-y-1">
-                <h3 className="font-bold text-base text-zinc-900">Schedule Free On-Site Onboarding</h3>
+              <div className="space-y-0.5">
+                <h3 className="font-semibold text-sm sm:text-base text-zinc-900">Schedule Free On-Site Onboarding</h3>
                 <p className="text-xs text-zinc-500">
-                  Our field engineers will visit your coaching center, insert all student data, and test your biometric scanners.
+                  Our field engineers will visit your coaching center, digitize student records, and test your scanners.
                 </p>
               </div>
 
               {submitted ? (
-                <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs space-y-2 animate-fadeIn">
-                  <div className="font-bold flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-emerald-600" />
-                    Request Received Successfully!
+                <div className="p-3.5 rounded bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs space-y-1 animate-fadeIn">
+                  <div className="font-semibold flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                    Request Received Successfully
                   </div>
-                  <p>
-                    A Docent onboarding specialist will call you at <strong className="font-semibold">{phone}</strong> within 30 minutes to arrange your center visit.
+                  <p className="text-[11px]">
+                    An onboarding specialist will reach out to <strong className="font-semibold">{phone}</strong> shortly to confirm your center visit.
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-3">
+                <form onSubmit={handleSubmit} className="space-y-2.5">
                   <div>
-                    <label className="text-xs font-semibold text-zinc-700 block mb-1">Coaching / Academy Name</label>
+                    <label className="text-[11px] font-semibold text-zinc-700 block mb-1">Coaching / Academy Name</label>
                     <input
                       type="text"
                       required
                       placeholder="e.g. Master Physics Coaching"
                       value={centerName}
                       onChange={(e) => setCenterName(e.target.value)}
-                      className="w-full h-10 px-3 rounded-lg border border-zinc-200 text-xs bg-zinc-50 focus:bg-white focus:border-blue-600 focus:outline-none transition"
+                      className="w-full h-8.5 px-3 rounded border border-zinc-200 text-xs bg-zinc-50 focus:bg-white focus:border-[#1d4ed8] focus:outline-none transition"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-semibold text-zinc-700 block mb-1">Contact Phone / WhatsApp</label>
+                    <label className="text-[11px] font-semibold text-zinc-700 block mb-1">Contact Phone / WhatsApp</label>
                     <input
                       type="tel"
                       required
                       placeholder="+880 1700-000000"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full h-10 px-3 rounded-lg border border-zinc-200 text-xs bg-zinc-50 focus:bg-white focus:border-blue-600 focus:outline-none transition"
+                      className="w-full h-8.5 px-3 rounded border border-zinc-200 text-xs bg-zinc-50 focus:bg-white focus:border-[#1d4ed8] focus:outline-none transition"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full h-10 rounded-lg bg-blue-600 text-white text-xs font-bold hover:bg-blue-700 active:scale-98 transition shadow-xs"
+                    className="w-full h-9 rounded bg-[#1d4ed8] hover:bg-[#1e40af] text-white text-xs font-semibold shadow-stitch transition"
                   >
-                    Request Physical Center Visit & Data Setup
+                    Request Physical Center Visit &amp; Data Setup
                   </button>
 
-                  <div className="text-[11px] text-zinc-400 text-center">
-                    Zero obligation • 100% Free Data Digitization
+                  <div className="text-[10px] text-zinc-400 text-center">
+                    Zero obligation • 100% Free Data Digitization Included
                   </div>
                 </form>
               )}
