@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ShieldCheck, ExternalLink } from "lucide-react";
 
 export function Footer() {
@@ -8,10 +9,10 @@ export function Footer() {
     <footer className="border-t border-zinc-200/80 bg-[#fafaf9] pt-12 pb-10 text-xs text-zinc-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 pb-10 border-b border-zinc-200/80">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-zinc-200/80">
           
-          {/* Col 1: Brand & Tagline (2 cols) */}
-          <div className="md:col-span-2 space-y-3">
+          {/* Col 1: Brand & Tagline */}
+          <div className="lg:col-span-2 space-y-3">
             <div className="flex items-center gap-2.5">
               <img
                 src="/logo.png"
@@ -34,22 +35,36 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Core Solutions */}
+          {/* Col 2: Solutions & Features */}
           <div className="space-y-2">
-            <div className="font-semibold text-zinc-900 text-xs uppercase tracking-wider font-mono">Features</div>
+            <div className="font-semibold text-zinc-900 text-xs uppercase tracking-wider font-mono">Product</div>
             <ul className="space-y-1.5 text-xs text-zinc-500">
-              <li><a href="#fee-engine" className="hover:text-zinc-900 transition">Grace Period Fee Engine</a></li>
-              <li><a href="#attendance" className="hover:text-zinc-900 transition">Biometric &amp; USI Attendance</a></li>
-              <li><a href="#homework-reports" className="hover:text-zinc-900 transition">10-Point Daily Homework</a></li>
-              <li><a href="#homework-reports" className="hover:text-zinc-900 transition">Automated Parent SMS</a></li>
-              <li><a href="#calculator" className="hover:text-zinc-900 transition">Coaching ROI Calculator</a></li>
+              <li><Link href="/features" className="hover:text-zinc-900 transition">Operating System Features</Link></li>
+              <li><Link href="/services" className="hover:text-zinc-900 transition">Ground Field Support</Link></li>
+              <li><Link href="/coaching-software" className="hover:text-zinc-900 transition">For Coaching Academies</Link></li>
+              <li><Link href="/pricing" className="hover:text-zinc-900 transition">Pricing Plans</Link></li>
+              <li><Link href="/compare" className="hover:text-zinc-900 transition">DocentBase vs. Excel &amp; ERPs</Link></li>
             </ul>
           </div>
 
-          {/* Col 3: Ecosystem & Subdomains */}
+          {/* Col 3: Resources & Guides */}
           <div className="space-y-2">
-            <div className="font-semibold text-zinc-900 text-xs uppercase tracking-wider font-mono">Workspaces</div>
+            <div className="font-semibold text-zinc-900 text-xs uppercase tracking-wider font-mono">Resources</div>
             <ul className="space-y-1.5 text-xs text-zinc-500">
+              <li><Link href="/help" className="hover:text-[#1d4ed8] text-[#1d4ed8] font-medium transition">Help Center &amp; Docs (/help)</Link></li>
+              <li><Link href="/help/troubleshoot" className="hover:text-zinc-900 transition">Diagnostic Troubleshooter</Link></li>
+              <li><Link href="/blog" className="hover:text-zinc-900 transition">Field Blog &amp; Insights</Link></li>
+              <li><Link href="/customers" className="hover:text-zinc-900 transition">Case Studies &amp; Stories</Link></li>
+              <li><Link href="/security" className="hover:text-zinc-900 transition">Security &amp; Bug Bounty</Link></li>
+            </ul>
+          </div>
+
+          {/* Col 4: Ecosystem & Company */}
+          <div className="space-y-2">
+            <div className="font-semibold text-zinc-900 text-xs uppercase tracking-wider font-mono">Company</div>
+            <ul className="space-y-1.5 text-xs text-zinc-500">
+              <li><Link href="/about" className="hover:text-zinc-900 transition">About DocentBase</Link></li>
+              <li><Link href="/contact" className="hover:text-zinc-900 transition">Contact Operations Desk</Link></li>
               <li>
                 <a 
                   href="https://admin.docentbase.com" 
@@ -72,41 +87,6 @@ export function Footer() {
                   <ExternalLink className="w-3 h-3 text-zinc-400" />
                 </a>
               </li>
-              <li>
-                <a 
-                  href="/help" 
-                  className="hover:text-[#1d4ed8] text-[#1d4ed8] font-medium transition"
-                >
-                  Help Center &amp; Docs (/help)
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="/help/troubleshoot" 
-                  className="hover:text-zinc-900 transition"
-                >
-                  Diagnostic Problem Solver
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://docentbase.com" 
-                  className="hover:text-zinc-900 transition"
-                >
-                  docentbase.com (Home)
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 4: Ground Support */}
-          <div className="space-y-2">
-            <div className="font-semibold text-zinc-900 text-xs uppercase tracking-wider font-mono">Ground Layer</div>
-            <ul className="space-y-1.5 text-xs text-zinc-500">
-              <li><span>Data Entry as a Service</span></li>
-              <li><span>On-Site Center Setup</span></li>
-              <li><span>Question Bank Printing</span></li>
-              <li><span>24/7 Teacher Hotline</span></li>
             </ul>
           </div>
 
@@ -118,11 +98,11 @@ export function Footer() {
             © {new Date().getFullYear()} Docent Technologies (DocentBase). All rights reserved.
           </div>
           <div className="flex items-center gap-3">
-            <a href="#" className="hover:text-zinc-600 transition">Privacy Policy</a>
+            <Link href="/security" className="hover:text-zinc-600 transition">Security Policy</Link>
             <span>•</span>
-            <a href="#" className="hover:text-zinc-600 transition">Terms of Service</a>
+            <Link href="/contact" className="hover:text-zinc-600 transition">Support Hotline</Link>
             <span>•</span>
-            <a href="#" className="hover:text-zinc-600 transition">Security Policy</a>
+            <Link href="/about" className="hover:text-zinc-600 transition">About</Link>
           </div>
         </div>
 

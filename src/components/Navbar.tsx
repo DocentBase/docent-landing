@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { 
   ArrowRight, 
   Menu, 
@@ -10,7 +11,10 @@ import {
   Fingerprint, 
   BookOpen, 
   ExternalLink,
-  ShieldCheck
+  ShieldCheck,
+  Building,
+  Sparkles,
+  HelpCircle,
 } from "lucide-react";
 
 export function Navbar() {
@@ -37,7 +41,7 @@ export function Navbar() {
         
         {/* Brand Logo & Editorial Wordmark */}
         <div className="flex items-center gap-3">
-          <a href="#" className="flex items-center gap-2.5 group">
+          <Link href="/" className="flex items-center gap-2.5 group">
             <img
               src="/logo.png"
               alt="Docent Logo"
@@ -52,33 +56,30 @@ export function Navbar() {
               </div>
               <span className="text-[10px] text-zinc-500 font-medium tracking-tight hidden sm:inline-block">Coaching Operating System</span>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-6 text-[13px] font-medium text-zinc-600">
-          <a href="#fee-engine" className="hover:text-zinc-950 transition-colors">
-            Fee Engine
-          </a>
-          <a href="#attendance" className="hover:text-zinc-950 transition-colors">
-            Attendance
-          </a>
-          <a href="#physical-support" className="hover:text-zinc-950 transition-colors flex items-center gap-1.5">
+          <Link href="/features" className="hover:text-zinc-950 transition-colors">
+            Features
+          </Link>
+          <Link href="/services" className="hover:text-zinc-950 transition-colors flex items-center gap-1.5">
             <span>Ground Support</span>
             <span className="px-1.5 py-0.2 rounded text-[9px] font-bold bg-amber-50 text-amber-900 border border-amber-200">ON-SITE</span>
-          </a>
-          <a href="#homework-reports" className="hover:text-zinc-950 transition-colors">
-            Daily 10-Pt Report
-          </a>
-          <a href="#calculator" className="hover:text-zinc-950 transition-colors">
-            ROI Calculator
-          </a>
-          <a href="#pricing" className="hover:text-zinc-950 transition-colors">
+          </Link>
+          <Link href="/coaching-software" className="hover:text-zinc-950 transition-colors">
+            For Academies
+          </Link>
+          <Link href="/pricing" className="hover:text-zinc-950 transition-colors">
             Pricing
-          </a>
-          <a href="/help" className="hover:text-[#1d4ed8] text-[#1d4ed8] font-semibold transition-colors flex items-center gap-1">
+          </Link>
+          <Link href="/blog" className="hover:text-zinc-950 transition-colors">
+            Insights &amp; Blog
+          </Link>
+          <Link href="/help" className="hover:text-[#1d4ed8] text-[#1d4ed8] font-semibold transition-colors flex items-center gap-1">
             <span>Help &amp; Docs</span>
-          </a>
+          </Link>
         </nav>
 
         {/* Action Buttons & Portal Direct Links */}
@@ -128,62 +129,89 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-zinc-200 px-4 pt-3 pb-6 space-y-3 shadow-stitch-md">
+        <div className="lg:hidden bg-white border-b border-zinc-200 px-4 pt-3 pb-6 space-y-3 shadow-stitch-md max-h-[85vh] overflow-y-auto">
           <div className="grid grid-cols-1 gap-1.5 pt-2 border-t border-zinc-100">
-            <a 
-              href="#fee-engine" 
+            <Link 
+              href="/features" 
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50 flex items-center justify-between"
             >
-              <span>Automated Fee & Grace Engine</span>
-              <CreditCard className="w-4 h-4 text-zinc-400" />
-            </a>
-            <a 
-              href="#attendance" 
+              <span>Features &amp; Modules</span>
+              <Sparkles className="w-4 h-4 text-zinc-400" />
+            </Link>
+            <Link 
+              href="/services" 
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50 flex items-center justify-between"
             >
-              <span>Biometric & QR Attendance</span>
-              <Fingerprint className="w-4 h-4 text-zinc-400" />
-            </a>
-            <a 
-              href="#physical-support" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50 flex items-center justify-between"
-            >
-              <span>24/7 Ground Field Support</span>
+              <span>Ground Support (Free Data Entry)</span>
               <span className="px-1.5 py-0.2 rounded text-[9px] font-bold bg-amber-50 text-amber-900 border border-amber-200">ON-SITE</span>
-            </a>
-            <a 
-              href="#homework-reports" 
+            </Link>
+            <Link 
+              href="/coaching-software" 
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50 flex items-center justify-between"
             >
-              <span>10-Point Daily Homework & SMS</span>
-              <BookOpen className="w-4 h-4 text-zinc-400" />
-            </a>
-            <a 
-              href="#calculator" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
-            >
-              ROI Calculator
-            </a>
-            <a 
-              href="#pricing" 
+              <span>For Coaching Academies</span>
+              <Building className="w-4 h-4 text-zinc-400" />
+            </Link>
+            <Link 
+              href="/pricing" 
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
             >
               Pricing Plans
-            </a>
-            <a 
+            </Link>
+            <Link 
+              href="/blog" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
+            >
+              Operational Blog &amp; Insights
+            </Link>
+            <Link 
+              href="/customers" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
+            >
+              Customer Case Studies
+            </Link>
+            <Link 
+              href="/compare" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
+            >
+              DocentBase vs. Excel / ERPs
+            </Link>
+            <Link 
+              href="/about" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
+            >
+              About Company
+            </Link>
+            <Link 
+              href="/contact" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
+            >
+              Contact Operations Desk
+            </Link>
+            <Link 
+              href="/security" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-md text-xs font-medium text-zinc-700 hover:bg-zinc-50"
+            >
+              Security &amp; Bug Bounty
+            </Link>
+            <Link 
               href="/help" 
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 rounded-md text-xs font-semibold text-[#1d4ed8] bg-blue-50/50 hover:bg-blue-50 flex items-center justify-between"
             >
               <span>Help Center &amp; Documentation</span>
               <BookOpen className="w-4 h-4 text-[#1d4ed8]" />
-            </a>
+            </Link>
           </div>
 
           <div className="pt-3 border-t border-zinc-100 space-y-2">
@@ -203,7 +231,7 @@ export function Navbar() {
               className="w-full flex h-9.5 items-center justify-center gap-2 rounded-md border border-zinc-200 bg-white text-xs font-semibold text-zinc-800 shadow-stitch"
             >
               <Users className="w-3.5 h-3.5 text-zinc-500" />
-              <span>Student & Parent Portal (student.docentbase.com)</span>
+              <span>Student &amp; Parent Portal (student.docentbase.com)</span>
             </a>
           </div>
         </div>
